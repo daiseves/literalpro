@@ -1,26 +1,19 @@
 function validate() {
- if( document.myForm.Name.value == "" ) {
-            alert( "Please provide your name!" );
-            document.myForm.Name.focus() ;
-            return false;
+ if( document.form.name.value == "" ) {
+  alert( "Nombre inválido." );
+  document.form.name.focus() ;
+  return false;
          }
-         if( document.myForm.EMail.value == "" ) {
-            alert( "Please provide your Email!" );
-            document.myForm.EMail.focus() ;
-            return false;
+ if( document.form.email.value == "" ) {
+  alert( "Em.ail inválido" );
+  document.form.email.focus() ;
+  return false;
+ }
+ if( document.form.message.value == == "" ) {
+  alert( "Por favor, ingrese un mensaje" );
+  return false;
          }
-         if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
-            document.myForm.Zip.value.length != 5 ) {
-            
-            alert( "Please provide a zip in the format #####." );
-            document.myForm.Zip.focus() ;
-            return false;
-         }
-         if( document.myForm.Country.value == "-1" ) {
-            alert( "Please provide your country!" );
-            return false;
-         }
-         return( true );
+ return( true );
       }
    //-->
 </script>
