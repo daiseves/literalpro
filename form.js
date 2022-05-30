@@ -1,15 +1,15 @@
 function validate() {
     var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
-    var regName = /\d+$/;
+    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
 
     let n = document.forms["form"]["nombre"].value;
-    if (n == "" || regName.test(n) ) {
+    if (n == "" || !regName.test(n) ) {
       alert("Nombre inválido.");
       return false;
     }
 
     let e = document.forms["form"]["email"].value;
-    if (e == "" || regEmail.test(e)) {
+    if (e == "" || !regEmail.test(e)) {
       alert("Email inválido");
       return false;
     }
