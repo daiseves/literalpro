@@ -5,7 +5,7 @@ submit.addEventListener("click", validate);
 function validate() {
     var name = document.form.name.value;
     var email = document.form.email.value;
-    var text = document.form.mensaje.value;
+    var mensaje = document.form.mensaje.value;
  
     var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
     var regName = /\d+$/g; 
@@ -24,6 +24,7 @@ function validate() {
     
     if(text === "" ) {
         alert( "Por favor, ingrese un mensaje" );
+        mensaje.focus() ;
         return false;
     }
          return( true );
