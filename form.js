@@ -2,14 +2,15 @@ const submit = document.getElementById("submit-button");
 submit.addEventListener("click", validate);
 
 function validate() {
- if( document.form.name.value == "" ) {
+ e.preventDefault()
+ if(form.name.value == "" ) {
   alert( "Nombre inválido." );
-  document.form.name.focus() ;
+  form.name.focus() ;
   return false;
          }
- if( document.form.email.value == "" ) {
+ if(form.email.value == "" ) {
   alert( "Em.ail inválido" );
-  document.form.email.focus() ;
+  form.email.focus() ;
   return false;
   
  var email = $("#email").val();
@@ -17,7 +18,7 @@ function validate() {
   alert( "Email inválido" );
   return false;
  }
- if( document.form.message.value ==== "" ) {
+ if(form.message.value ==== "" ) {
   alert( "Por favor, ingrese un mensaje" );
   return false;
          }
