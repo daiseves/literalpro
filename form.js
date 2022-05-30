@@ -1,32 +1,26 @@
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    valido();
-  });
+function validate() {
+    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+    var regName = /\d+$/;
 
-function valido() {
-    var name = document.form.name.value;
-    var email = document.form.email.value;
-    var mensaje = document.form.mensaje.value;
- 
-    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
-    var regName = /\d+$/g; 
-    
-    if (name == "" || regName.test(name)) { 
-        alert( "Nombre inválido." );
-        name.focus() ;
-        return false;
+    let n = document.forms["form"]["nombre"].value;
+    if (n == "" || regName.test(n) ) {
+      alert("Nombre inválido.");
+      return false;
     }
 
-    if(email == "" || !regEmail.test(email)) {
-        alert( "Email inválido" );
-        email.focus() ;
-        return false;
+    let e = document.forms["form"]["email"].value;
+    if (e == "" || regEmail.test(e)) {
+      alert("Email inválido");
+      return false;
     }
-    
-    if(text === "" ) {
-        alert( "Por favor, ingrese un mensaje" );
-        mensaje.focus() ;
-        return false;
+
+    let t = document.forms["form"]["mensaje"].value;
+    if (t == "") {
+      alert("Por favor, ingrese un mensaje");
+      return false;
     }
-    return form.submit();
-      }
+
+    alert("¡Gracias por enviar tu mensaje!");
+
+
+  }
