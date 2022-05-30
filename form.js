@@ -1,8 +1,9 @@
-const submit = document.getElementById("submit-button");
-submit.addEventListener("click", validate);
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    valido();
+  });
 
-
-function validate() {
+function valido() {
     var name = document.form.name.value;
     var email = document.form.email.value;
     var mensaje = document.form.mensaje.value;
@@ -27,5 +28,5 @@ function validate() {
         mensaje.focus() ;
         return false;
     }
-         return( true );
+    return form.submit();
       }
