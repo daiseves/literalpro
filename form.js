@@ -1,26 +1,30 @@
 const submit = document.getElementById("submit-button");
 submit.addEventListener("click", validate);
 
+
 function validate() {
- e.preventDefault()
- if(form.name.value == "" ) {
-  alert( "Nombre inválido." );
-  form.name.focus() ;
-  return false;
+    var name = document.form.name.value;
+    var email = document.form.email.value;
+    var text = document.form.mensaje.value;
+ 
+    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+    var regName = /\d+$/g; 
+    
+    if (name == "" || regName.test(name)) { 
+        alert( "Nombre inválido." );
+        name.focus() ;
+        return false;
          }
- if(form.email.value == "" ) {
-  alert( "Em.ail inválido" );
-  form.email.focus() ;
-  return false;
-  
- var email = $("#email").val();
- if ((/(.+)@(.+){2,}\.(.+){2,}/.test(email)) || email=="" || email==null) { } else {
-  alert( "Email inválido" );
-  return false;
- }
- if(form.message.value ==== "" ) {
-  alert( "Por favor, ingrese un mensaje" );
-  return false;
-         }
- return( true );
+
+    if(email == "" || !regEmail.test(email)) {
+        alert( "Email inválido" );
+        email.focus() ;
+        return false;
+    }
+    
+    if(text === "" ) {
+        alert( "Por favor, ingrese un mensaje" );
+        return false;
+    }
+         return( true );
       }
