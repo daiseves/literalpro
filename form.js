@@ -15,7 +15,7 @@ function valido() {
         alert( "Nombre inválido." );
         name.focus() ;
         return false;
-         }
+    }
 
     if(email == "" || !regEmail.test(email)) {
         alert( "Email inválido" );
