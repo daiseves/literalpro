@@ -1,10 +1,14 @@
-function validate() {
-    var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+  });
+  
+  function validate() {
+    var regEmail=/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
 
     let n = document.forms["form"]["nombre"].value;
     if (n == "" || !regName.test(n) ) {
-      alert("Nombre inválido.");
+      alert("Ingresa tu nombre completo.");
       return false;
     }
 
