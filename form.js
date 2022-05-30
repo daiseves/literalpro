@@ -1,3 +1,6 @@
+const submit = document.getElementById("submit-button");
+submit.addEventListener("click", validate);
+
 function validate() {
  if( document.form.name.value == "" ) {
   alert( "Nombre inválido." );
