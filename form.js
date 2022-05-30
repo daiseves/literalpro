@@ -1,30 +1,26 @@
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    valido();
-  });
-
-
-  function valido(form)
-  {
-    if(form.name.value == "") {
-      alert("Por favor, escribe tu nombre de usuario.");
-      form.name.focus();
-      return false;
-    }           
-
-    let emailValido = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-  
-    if(!emailValido.test(form.email.value)){
-        alert("Por favor, escribe tu correo electrónico.");
-        form.email.focus();
-        return false;
-    }
-    
-    if(form.message.value == "") {
-      alert("Por favor, escribe tu mensaje.");;
-      form.message.focus();
-      return false;
-    }
-  
-    return form.submit();
-  }
+function validate() {
+ if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+         if( document.myForm.EMail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+            document.myForm.Zip.value.length != 5 ) {
+            
+            alert( "Please provide a zip in the format #####." );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+         if( document.myForm.Country.value == "-1" ) {
+            alert( "Please provide your country!" );
+            return false;
+         }
+         return( true );
+      }
+   //-->
+</script>
