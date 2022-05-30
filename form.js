@@ -14,11 +14,9 @@ function validate() {
   alert( "Email inválido" );
   return false;
  }
- if( document.form.message.value == == "" ) {
+ if( document.form.message.value ==== "" ) {
   alert( "Por favor, ingrese un mensaje" );
   return false;
          }
  return( true );
       }
-   //-->
-</script>
