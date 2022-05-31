@@ -256,3 +256,10 @@ textarea.input1 {
       display:inline;
     }
   }
+
+  @media screen and (min-height: 1080px){
+    .main{
+    background-image: none;
+    background-color: rgb(41, 31, 48);
+  }
+}
