@@ -190,7 +190,7 @@ input[type=submit]{
     align-items: center;
 }
 
-.btn:hover{
+input[type=submit]:hover, input[type=reset]:hover{
     background: white;
     color:#6534c0;
 
