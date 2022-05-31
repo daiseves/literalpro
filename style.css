@@ -10,13 +10,6 @@ html{
     to{background-color: #6534c0;}
 }
 
-
-/*@media screen and (max-width:640px){
-    .fondo{
-        background-color: black;
-    }
-}*/
-
 body{
     background-color: black;
 }
@@ -78,6 +71,8 @@ footer{
     height: 100vh;
     width: 100vw;
     background-image: url("images/fondo.png");
+    text-align: center;
+    padding-top: 5%;
 }
 
 .container{
@@ -116,7 +111,7 @@ footer{
     animation: animation 5s linear infinite alternate;
 }
 
-.titulo{
+.titulo, .contact-title{
     display: block;
     font-family: 'Encode Sans', sans-serif;
     font-size: 24px;
@@ -151,33 +146,9 @@ footer{
     transition: 0.3s all ease;
 }
 
-
-.cajita{
-    background-color: black;
-    height: 60vh;
-    width: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-family: 'Encode Sans', sans-serif;
-    font-size: 200%;
-}
-.cajita-dos{
-    background-color: black;
-    height: 20vh;
-    width: 30vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-family: 'Encode Sans', sans-serif;
-    font-size: 200%;
-    margin-top: 2rem;
-}
-
-input[type=submit]{
+input[type=submit], input[type=reset] {
     min-width: 193px;
+    width: 193px;
     height: 50px;
     border-radius: 25px;
     background: #6534c0;
@@ -185,9 +156,6 @@ input[type=submit]{
     font-size: 15px;
     line-height: 1.5;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 input[type=submit]:hover, input[type=reset]:hover{
@@ -197,36 +165,41 @@ input[type=submit]:hover, input[type=reset]:hover{
 }
 
 input.input1 {
-    height: 50px;
-    border-radius: 25px;
+    height: 40px;
   }
-
 
 textarea.input1 {
     min-height: 150px;
-    border-radius: 25px;
   }
 
-
-.wrap-input1 {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    margin-bottom: 20px;
-  }
-  
 .input1 {
-    display: block;
-    width: 100%;
     background: #e6e6e6;
     font-family: 'Encode Sans', sans-serif;
     font-size: 15px;
-    line-height: 1.5;
     color: #666666;
+    cursor: text;
+    padding:0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 1em;
+    width: 80%;
+
+
   }
+
+  .formulario, iframe{
+    display: flex;
+    background-color: black;
+    border-radius: 1em;
+    width: 40%;
+    margin: auto;
+    flex-direction: column;
+    padding:1rem;
+    margin-bottom: 2rem;
+  }
+
+
+
   
-
-
 @media screen and (min-width: 930px) and (max-width: 1540px){
     #galeria{
       grid-template-columns: max-content max-content max-content; 
@@ -255,9 +228,11 @@ textarea.input1 {
     #hide{
       display:inline;
     }
+
   }
 
-  @media screen and (min-height: 1080px){
+  /*940 es lo que  ocupa la imagen a lo largo. Saco fondo para que no se repita*/
+  @media screen and (min-height: 940px){
     .main{
     background-image: none;
     background-color: rgb(41, 31, 48);
