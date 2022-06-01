@@ -10,13 +10,6 @@ html{
     to{background-color: #6534c0;}
 }
 
-
-/*@media screen and (max-width:640px){
-    .fondo{
-        background-color: black;
-    }
-}*/
-
 body{
     background-color: black;
 }
@@ -67,54 +60,49 @@ footer a{
     color:white;
 }
 
-footer{
+.footer{
     display: flex;
     justify-content: space-around;
+    height: 100%;
+    width: 100%;
 }
 
 .main{
     background:black;
     position: relative;
-    height: 100vh;
+    height: 75vh;
     width: 100vw;
     background-image: url("images/fondo.png");
     text-align: center;
     padding-top: 5%;
+    overflow-y: auto;
+
 }
 
-.container{
-    height: 99%;
-    width: 99%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.box{
-    font-family: 'Encode Sans', sans-serif;
-    font-size: 2vh;
-    background-color: black;
-    width: 570px;
-    height: 20%;
-    color: white;
+.item{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: left;
+    background: black;
+    width: 30%;
+    gap: 2rem;
+    border-radius: 1rem;
+    color:white;
+    margin: auto;
     margin-bottom: 1rem;
-
+    padding: 1rem;
+    font-family: 'Encode Sans', sans-serif;
+    overflow-y: auto;
 }
 
-.box img{
+.item img{
+    width: 100%;
+    padding: 1rem;
     border-radius: 100px;
-    width: auto;
-    height: 16vh;
-    margin-top: 0.8rem;
-    margin-left: 3rem;
-    margin-right: 3rem; 
     float:left;
-
-
 }
 
-.box:hover{
+.item:hover{
     animation: animation 5s linear infinite alternate;
 }
 
@@ -153,34 +141,7 @@ footer{
     transition: 0.3s all ease;
 }
 
-/*
-.cajita{
-    background-color: black;
-    height: 60vh;
-    width: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-family: 'Encode Sans', sans-serif;
-    font-size: 200%;
-}
-.cajita-dos{
-    background-color: black;
-    height: 20vh;
-    width: 30vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-family: 'Encode Sans', sans-serif;
-    font-size: 200%;
-    margin-top: 2rem;
-}
-*/
-
 input[type=submit], input[type=reset] {
-    min-width: 193px;
     width: 193px;
     height: 50px;
     border-radius: 25px;
