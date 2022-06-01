@@ -119,13 +119,12 @@ footer a{
 
 .grid-container{
     display: grid;
-    /*grid-template-columns: repeat(P3,1fr); Con la p, los elementos se ordenan uno abajo del otro
-      grid-template-columns: repeat(3,1fr); */
-    grid-template-columns: max-content max-content max-content;
-    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem 0.5rem;
     justify-content: center;
-    margin-bottom: 3rem;
-    padding: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 1rem;
 }
 
 .grid-item img{
