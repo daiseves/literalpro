@@ -88,6 +88,7 @@ footer a{
     padding: 1rem;
     font-family: 'Encode Sans', sans-serif;
     overflow-y: auto;
+    min-width: 300px;
 }
 
 .item img{
