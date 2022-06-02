@@ -217,6 +217,9 @@ textarea.input1 {
     #hide{
       display:inline;
   }
+      input[type=submit], input[type=reset] {
+        width: 110px;
+  }
 }
 
   /*940 es lo que  ocupa la imagen a lo largo. Saco fondo para que no se repita*/
