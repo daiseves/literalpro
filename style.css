@@ -218,7 +218,7 @@ textarea.input1 {
       display:inline;
   }
       input[type=submit], input[type=reset] {
-        width: 110px;
+        width: 125px;
   }
 }
 
